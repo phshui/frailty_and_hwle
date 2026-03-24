@@ -1,0 +1,181 @@
+# MLE 1984-1990
+#
+title=HSLE datafile=D:\gs_study2\HWLE\imach_country\hwle_eco_1_1.txt lastobs=114250 firstpass=1 lastpass=10
+ftol=1e-8 stepm=24 ncovcol=0 nqv=0 ntv=2 nqtv=0 nlstate=4 ndeath=1 maxwav=10 mle=1 weight=0
+model=1+age+V1+V2
+#q comment line.
+# Parameters nlstate*nlstate*ncov a12*1 + b12 * age + ...
+12 0. 0. 0. 0.
+13 0. 0. 0. 0.
+14 0. 0. 0. 0.
+15 0. 0. 0. 0.
+21 0. 0. 0. 0.
+23 0. 0. 0. 0.
+24 0. 0. 0. 0.
+25 0. 0. 0. 0.
+31 0. 0. 0. 0.
+32 0. 0. 0. 0.
+34 0. 0. 0. 0.
+35 0. 0. 0. 0.
+41 0. 0. 0. 0.
+42 0. 0. 0. 0.
+43 0. 0. 0. 0.
+45 0. 0. 0. 0.
+# Scales (for hessian or gradient estimation)
+12 0. 0. 0. 0.
+13 0. 0. 0. 0.
+14 0. 0. 0. 0.
+15 0. 0. 0. 0.
+21 0. 0. 0. 0.
+23 0. 0. 0. 0.
+24 0. 0. 0. 0.
+25 0. 0. 0. 0.
+31 0. 0. 0. 0.
+32 0. 0. 0. 0.
+34 0. 0. 0. 0.
+35 0. 0. 0. 0.
+41 0. 0. 0. 0.
+42 0. 0. 0. 0.
+43 0. 0. 0. 0.
+45 0. 0. 0. 0.
+# Covariance matrix
+#121 Var(a12)
+#122 Cov(b12,a12) Var(b12)
+#123 Cov(c12,a12) Cov(c12,b12) Var(c12)
+#124 Cov(d12,a12) Cov(d12,b12) Cov(d12,c12) Var(d12)
+#131 Cov(a13,a12) Cov(a13,b12) Cov(a13,c12) Cov(a13,d12) Var(a13)
+#132 Cov(b13,a12) Cov(b13,b12) Cov(b13,c12) Cov(b13,d12) Cov(b13,a13) Var(b13)
+#133 Cov(c13,a12) Cov(c13,b12) Cov(c13,c12) Cov(c13,d12) Cov(c13,a13) Cov(c13,b13) Var(c13)
+#134 Cov(d13,a12) Cov(d13,b12) Cov(d13,c12) Cov(d13,d12) Cov(d13,a13) Cov(d13,b13) Cov(d13,c13) Var(d13)
+#141 Cov(a14,a12) Cov(a14,b12) Cov(a14,c12) Cov(a14,d12) Cov(a14,a13) Cov(a14,b13) Cov(a14,c13) Cov(a14,d13) Var(a14)
+#142 Cov(b14,a12) Cov(b14,b12) Cov(b14,c12) Cov(b14,d12) Cov(b14,a13) Cov(b14,b13) Cov(b14,c13) Cov(b14,d13) Cov(b14,a14) Var(b14)
+#143 Cov(c14,a12) Cov(c14,b12) Cov(c14,c12) Cov(c14,d12) Cov(c14,a13) Cov(c14,b13) Cov(c14,c13) Cov(c14,d13) Cov(c14,a14) Cov(c14,b14) Var(c14)
+#144 Cov(d14,a12) Cov(d14,b12) Cov(d14,c12) Cov(d14,d12) Cov(d14,a13) Cov(d14,b13) Cov(d14,c13) Cov(d14,d13) Cov(d14,a14) Cov(d14,b14) Cov(d14,c14) Var(d14)
+#151 Cov(a15,a12) Cov(a15,b12) Cov(a15,c12) Cov(a15,d12) Cov(a15,a13) Cov(a15,b13) Cov(a15,c13) Cov(a15,d13) Cov(a15,a14) Cov(a15,b14) Cov(a15,c14) Cov(a15,d14) Var(a15)
+#152 Cov(b15,a12) Cov(b15,b12) Cov(b15,c12) Cov(b15,d12) Cov(b15,a13) Cov(b15,b13) Cov(b15,c13) Cov(b15,d13) Cov(b15,a14) Cov(b15,b14) Cov(b15,c14) Cov(b15,d14) Cov(b15,a15) Var(b15)
+#153 Cov(c15,a12) Cov(c15,b12) Cov(c15,c12) Cov(c15,d12) Cov(c15,a13) Cov(c15,b13) Cov(c15,c13) Cov(c15,d13) Cov(c15,a14) Cov(c15,b14) Cov(c15,c14) Cov(c15,d14) Cov(c15,a15) Cov(c15,b15) Var(c15)
+#154 Cov(d15,a12) Cov(d15,b12) Cov(d15,c12) Cov(d15,d12) Cov(d15,a13) Cov(d15,b13) Cov(d15,c13) Cov(d15,d13) Cov(d15,a14) Cov(d15,b14) Cov(d15,c14) Cov(d15,d14) Cov(d15,a15) Cov(d15,b15) Cov(d15,c15) Var(d15)
+#211 Cov(a21,a12) Cov(a21,b12) Cov(a21,c12) Cov(a21,d12) Cov(a21,a13) Cov(a21,b13) Cov(a21,c13) Cov(a21,d13) Cov(a21,a14) Cov(a21,b14) Cov(a21,c14) Cov(a21,d14) Cov(a21,a15) Cov(a21,b15) Cov(a21,c15) Cov(a21,d15) Var(a21)
+#212 Cov(b21,a12) Cov(b21,b12) Cov(b21,c12) Cov(b21,d12) Cov(b21,a13) Cov(b21,b13) Cov(b21,c13) Cov(b21,d13) Cov(b21,a14) Cov(b21,b14) Cov(b21,c14) Cov(b21,d14) Cov(b21,a15) Cov(b21,b15) Cov(b21,c15) Cov(b21,d15) Cov(b21,a21) Var(b21)
+#213 Cov(c21,a12) Cov(c21,b12) Cov(c21,c12) Cov(c21,d12) Cov(c21,a13) Cov(c21,b13) Cov(c21,c13) Cov(c21,d13) Cov(c21,a14) Cov(c21,b14) Cov(c21,c14) Cov(c21,d14) Cov(c21,a15) Cov(c21,b15) Cov(c21,c15) Cov(c21,d15) Cov(c21,a21) Cov(c21,b21) Var(c21)
+#214 Cov(d21,a12) Cov(d21,b12) Cov(d21,c12) Cov(d21,d12) Cov(d21,a13) Cov(d21,b13) Cov(d21,c13) Cov(d21,d13) Cov(d21,a14) Cov(d21,b14) Cov(d21,c14) Cov(d21,d14) Cov(d21,a15) Cov(d21,b15) Cov(d21,c15) Cov(d21,d15) Cov(d21,a21) Cov(d21,b21) Cov(d21,c21) Var(d21)
+#231 Cov(a23,a12) Cov(a23,b12) Cov(a23,c12) Cov(a23,d12) Cov(a23,a13) Cov(a23,b13) Cov(a23,c13) Cov(a23,d13) Cov(a23,a14) Cov(a23,b14) Cov(a23,c14) Cov(a23,d14) Cov(a23,a15) Cov(a23,b15) Cov(a23,c15) Cov(a23,d15) Cov(a23,a21) Cov(a23,b21) Cov(a23,c21) Cov(a23,d21) Var(a23)
+#232 Cov(b23,a12) Cov(b23,b12) Cov(b23,c12) Cov(b23,d12) Cov(b23,a13) Cov(b23,b13) Cov(b23,c13) Cov(b23,d13) Cov(b23,a14) Cov(b23,b14) Cov(b23,c14) Cov(b23,d14) Cov(b23,a15) Cov(b23,b15) Cov(b23,c15) Cov(b23,d15) Cov(b23,a21) Cov(b23,b21) Cov(b23,c21) Cov(b23,d21) Cov(b23,a23) Var(b23)
+#233 Cov(c23,a12) Cov(c23,b12) Cov(c23,c12) Cov(c23,d12) Cov(c23,a13) Cov(c23,b13) Cov(c23,c13) Cov(c23,d13) Cov(c23,a14) Cov(c23,b14) Cov(c23,c14) Cov(c23,d14) Cov(c23,a15) Cov(c23,b15) Cov(c23,c15) Cov(c23,d15) Cov(c23,a21) Cov(c23,b21) Cov(c23,c21) Cov(c23,d21) Cov(c23,a23) Cov(c23,b23) Var(c23)
+#234 Cov(d23,a12) Cov(d23,b12) Cov(d23,c12) Cov(d23,d12) Cov(d23,a13) Cov(d23,b13) Cov(d23,c13) Cov(d23,d13) Cov(d23,a14) Cov(d23,b14) Cov(d23,c14) Cov(d23,d14) Cov(d23,a15) Cov(d23,b15) Cov(d23,c15) Cov(d23,d15) Cov(d23,a21) Cov(d23,b21) Cov(d23,c21) Cov(d23,d21) Cov(d23,a23) Cov(d23,b23) Cov(d23,c23) Var(d23)
+#241 Cov(a24,a12) Cov(a24,b12) Cov(a24,c12) Cov(a24,d12) Cov(a24,a13) Cov(a24,b13) Cov(a24,c13) Cov(a24,d13) Cov(a24,a14) Cov(a24,b14) Cov(a24,c14) Cov(a24,d14) Cov(a24,a15) Cov(a24,b15) Cov(a24,c15) Cov(a24,d15) Cov(a24,a21) Cov(a24,b21) Cov(a24,c21) Cov(a24,d21) Cov(a24,a23) Cov(a24,b23) Cov(a24,c23) Cov(a24,d23) Var(a24)
+#242 Cov(b24,a12) Cov(b24,b12) Cov(b24,c12) Cov(b24,d12) Cov(b24,a13) Cov(b24,b13) Cov(b24,c13) Cov(b24,d13) Cov(b24,a14) Cov(b24,b14) Cov(b24,c14) Cov(b24,d14) Cov(b24,a15) Cov(b24,b15) Cov(b24,c15) Cov(b24,d15) Cov(b24,a21) Cov(b24,b21) Cov(b24,c21) Cov(b24,d21) Cov(b24,a23) Cov(b24,b23) Cov(b24,c23) Cov(b24,d23) Cov(b24,a24) Var(b24)
+#243 Cov(c24,a12) Cov(c24,b12) Cov(c24,c12) Cov(c24,d12) Cov(c24,a13) Cov(c24,b13) Cov(c24,c13) Cov(c24,d13) Cov(c24,a14) Cov(c24,b14) Cov(c24,c14) Cov(c24,d14) Cov(c24,a15) Cov(c24,b15) Cov(c24,c15) Cov(c24,d15) Cov(c24,a21) Cov(c24,b21) Cov(c24,c21) Cov(c24,d21) Cov(c24,a23) Cov(c24,b23) Cov(c24,c23) Cov(c24,d23) Cov(c24,a24) Cov(c24,b24) Var(c24)
+#244 Cov(d24,a12) Cov(d24,b12) Cov(d24,c12) Cov(d24,d12) Cov(d24,a13) Cov(d24,b13) Cov(d24,c13) Cov(d24,d13) Cov(d24,a14) Cov(d24,b14) Cov(d24,c14) Cov(d24,d14) Cov(d24,a15) Cov(d24,b15) Cov(d24,c15) Cov(d24,d15) Cov(d24,a21) Cov(d24,b21) Cov(d24,c21) Cov(d24,d21) Cov(d24,a23) Cov(d24,b23) Cov(d24,c23) Cov(d24,d23) Cov(d24,a24) Cov(d24,b24) Cov(d24,c24) Var(d24)
+#251 Cov(a25,a12) Cov(a25,b12) Cov(a25,c12) Cov(a25,d12) Cov(a25,a13) Cov(a25,b13) Cov(a25,c13) Cov(a25,d13) Cov(a25,a14) Cov(a25,b14) Cov(a25,c14) Cov(a25,d14) Cov(a25,a15) Cov(a25,b15) Cov(a25,c15) Cov(a25,d15) Cov(a25,a21) Cov(a25,b21) Cov(a25,c21) Cov(a25,d21) Cov(a25,a23) Cov(a25,b23) Cov(a25,c23) Cov(a25,d23) Cov(a25,a24) Cov(a25,b24) Cov(a25,c24) Cov(a25,d24) Var(a25)
+#252 Cov(b25,a12) Cov(b25,b12) Cov(b25,c12) Cov(b25,d12) Cov(b25,a13) Cov(b25,b13) Cov(b25,c13) Cov(b25,d13) Cov(b25,a14) Cov(b25,b14) Cov(b25,c14) Cov(b25,d14) Cov(b25,a15) Cov(b25,b15) Cov(b25,c15) Cov(b25,d15) Cov(b25,a21) Cov(b25,b21) Cov(b25,c21) Cov(b25,d21) Cov(b25,a23) Cov(b25,b23) Cov(b25,c23) Cov(b25,d23) Cov(b25,a24) Cov(b25,b24) Cov(b25,c24) Cov(b25,d24) Cov(b25,a25) Var(b25)
+#253 Cov(c25,a12) Cov(c25,b12) Cov(c25,c12) Cov(c25,d12) Cov(c25,a13) Cov(c25,b13) Cov(c25,c13) Cov(c25,d13) Cov(c25,a14) Cov(c25,b14) Cov(c25,c14) Cov(c25,d14) Cov(c25,a15) Cov(c25,b15) Cov(c25,c15) Cov(c25,d15) Cov(c25,a21) Cov(c25,b21) Cov(c25,c21) Cov(c25,d21) Cov(c25,a23) Cov(c25,b23) Cov(c25,c23) Cov(c25,d23) Cov(c25,a24) Cov(c25,b24) Cov(c25,c24) Cov(c25,d24) Cov(c25,a25) Cov(c25,b25) Var(c25)
+#254 Cov(d25,a12) Cov(d25,b12) Cov(d25,c12) Cov(d25,d12) Cov(d25,a13) Cov(d25,b13) Cov(d25,c13) Cov(d25,d13) Cov(d25,a14) Cov(d25,b14) Cov(d25,c14) Cov(d25,d14) Cov(d25,a15) Cov(d25,b15) Cov(d25,c15) Cov(d25,d15) Cov(d25,a21) Cov(d25,b21) Cov(d25,c21) Cov(d25,d21) Cov(d25,a23) Cov(d25,b23) Cov(d25,c23) Cov(d25,d23) Cov(d25,a24) Cov(d25,b24) Cov(d25,c24) Cov(d25,d24) Cov(d25,a25) Cov(d25,b25) Cov(d25,c25) Var(d25)
+#311 Cov(a31,a12) Cov(a31,b12) Cov(a31,c12) Cov(a31,d12) Cov(a31,a13) Cov(a31,b13) Cov(a31,c13) Cov(a31,d13) Cov(a31,a14) Cov(a31,b14) Cov(a31,c14) Cov(a31,d14) Cov(a31,a15) Cov(a31,b15) Cov(a31,c15) Cov(a31,d15) Cov(a31,a21) Cov(a31,b21) Cov(a31,c21) Cov(a31,d21) Cov(a31,a23) Cov(a31,b23) Cov(a31,c23) Cov(a31,d23) Cov(a31,a24) Cov(a31,b24) Cov(a31,c24) Cov(a31,d24) Cov(a31,a25) Cov(a31,b25) Cov(a31,c25) Cov(a31,d25) Var(a31)
+#312 Cov(b31,a12) Cov(b31,b12) Cov(b31,c12) Cov(b31,d12) Cov(b31,a13) Cov(b31,b13) Cov(b31,c13) Cov(b31,d13) Cov(b31,a14) Cov(b31,b14) Cov(b31,c14) Cov(b31,d14) Cov(b31,a15) Cov(b31,b15) Cov(b31,c15) Cov(b31,d15) Cov(b31,a21) Cov(b31,b21) Cov(b31,c21) Cov(b31,d21) Cov(b31,a23) Cov(b31,b23) Cov(b31,c23) Cov(b31,d23) Cov(b31,a24) Cov(b31,b24) Cov(b31,c24) Cov(b31,d24) Cov(b31,a25) Cov(b31,b25) Cov(b31,c25) Cov(b31,d25) Cov(b31,a31) Var(b31)
+#313 Cov(c31,a12) Cov(c31,b12) Cov(c31,c12) Cov(c31,d12) Cov(c31,a13) Cov(c31,b13) Cov(c31,c13) Cov(c31,d13) Cov(c31,a14) Cov(c31,b14) Cov(c31,c14) Cov(c31,d14) Cov(c31,a15) Cov(c31,b15) Cov(c31,c15) Cov(c31,d15) Cov(c31,a21) Cov(c31,b21) Cov(c31,c21) Cov(c31,d21) Cov(c31,a23) Cov(c31,b23) Cov(c31,c23) Cov(c31,d23) Cov(c31,a24) Cov(c31,b24) Cov(c31,c24) Cov(c31,d24) Cov(c31,a25) Cov(c31,b25) Cov(c31,c25) Cov(c31,d25) Cov(c31,a31) Cov(c31,b31) Var(c31)
+#314 Cov(d31,a12) Cov(d31,b12) Cov(d31,c12) Cov(d31,d12) Cov(d31,a13) Cov(d31,b13) Cov(d31,c13) Cov(d31,d13) Cov(d31,a14) Cov(d31,b14) Cov(d31,c14) Cov(d31,d14) Cov(d31,a15) Cov(d31,b15) Cov(d31,c15) Cov(d31,d15) Cov(d31,a21) Cov(d31,b21) Cov(d31,c21) Cov(d31,d21) Cov(d31,a23) Cov(d31,b23) Cov(d31,c23) Cov(d31,d23) Cov(d31,a24) Cov(d31,b24) Cov(d31,c24) Cov(d31,d24) Cov(d31,a25) Cov(d31,b25) Cov(d31,c25) Cov(d31,d25) Cov(d31,a31) Cov(d31,b31) Cov(d31,c31) Var(d31)
+#321 Cov(a32,a12) Cov(a32,b12) Cov(a32,c12) Cov(a32,d12) Cov(a32,a13) Cov(a32,b13) Cov(a32,c13) Cov(a32,d13) Cov(a32,a14) Cov(a32,b14) Cov(a32,c14) Cov(a32,d14) Cov(a32,a15) Cov(a32,b15) Cov(a32,c15) Cov(a32,d15) Cov(a32,a21) Cov(a32,b21) Cov(a32,c21) Cov(a32,d21) Cov(a32,a23) Cov(a32,b23) Cov(a32,c23) Cov(a32,d23) Cov(a32,a24) Cov(a32,b24) Cov(a32,c24) Cov(a32,d24) Cov(a32,a25) Cov(a32,b25) Cov(a32,c25) Cov(a32,d25) Cov(a32,a31) Cov(a32,b31) Cov(a32,c31) Cov(a32,d31) Var(a32)
+#322 Cov(b32,a12) Cov(b32,b12) Cov(b32,c12) Cov(b32,d12) Cov(b32,a13) Cov(b32,b13) Cov(b32,c13) Cov(b32,d13) Cov(b32,a14) Cov(b32,b14) Cov(b32,c14) Cov(b32,d14) Cov(b32,a15) Cov(b32,b15) Cov(b32,c15) Cov(b32,d15) Cov(b32,a21) Cov(b32,b21) Cov(b32,c21) Cov(b32,d21) Cov(b32,a23) Cov(b32,b23) Cov(b32,c23) Cov(b32,d23) Cov(b32,a24) Cov(b32,b24) Cov(b32,c24) Cov(b32,d24) Cov(b32,a25) Cov(b32,b25) Cov(b32,c25) Cov(b32,d25) Cov(b32,a31) Cov(b32,b31) Cov(b32,c31) Cov(b32,d31) Cov(b32,a32) Var(b32)
+#323 Cov(c32,a12) Cov(c32,b12) Cov(c32,c12) Cov(c32,d12) Cov(c32,a13) Cov(c32,b13) Cov(c32,c13) Cov(c32,d13) Cov(c32,a14) Cov(c32,b14) Cov(c32,c14) Cov(c32,d14) Cov(c32,a15) Cov(c32,b15) Cov(c32,c15) Cov(c32,d15) Cov(c32,a21) Cov(c32,b21) Cov(c32,c21) Cov(c32,d21) Cov(c32,a23) Cov(c32,b23) Cov(c32,c23) Cov(c32,d23) Cov(c32,a24) Cov(c32,b24) Cov(c32,c24) Cov(c32,d24) Cov(c32,a25) Cov(c32,b25) Cov(c32,c25) Cov(c32,d25) Cov(c32,a31) Cov(c32,b31) Cov(c32,c31) Cov(c32,d31) Cov(c32,a32) Cov(c32,b32) Var(c32)
+#324 Cov(d32,a12) Cov(d32,b12) Cov(d32,c12) Cov(d32,d12) Cov(d32,a13) Cov(d32,b13) Cov(d32,c13) Cov(d32,d13) Cov(d32,a14) Cov(d32,b14) Cov(d32,c14) Cov(d32,d14) Cov(d32,a15) Cov(d32,b15) Cov(d32,c15) Cov(d32,d15) Cov(d32,a21) Cov(d32,b21) Cov(d32,c21) Cov(d32,d21) Cov(d32,a23) Cov(d32,b23) Cov(d32,c23) Cov(d32,d23) Cov(d32,a24) Cov(d32,b24) Cov(d32,c24) Cov(d32,d24) Cov(d32,a25) Cov(d32,b25) Cov(d32,c25) Cov(d32,d25) Cov(d32,a31) Cov(d32,b31) Cov(d32,c31) Cov(d32,d31) Cov(d32,a32) Cov(d32,b32) Cov(d32,c32) Var(d32)
+#341 Cov(a34,a12) Cov(a34,b12) Cov(a34,c12) Cov(a34,d12) Cov(a34,a13) Cov(a34,b13) Cov(a34,c13) Cov(a34,d13) Cov(a34,a14) Cov(a34,b14) Cov(a34,c14) Cov(a34,d14) Cov(a34,a15) Cov(a34,b15) Cov(a34,c15) Cov(a34,d15) Cov(a34,a21) Cov(a34,b21) Cov(a34,c21) Cov(a34,d21) Cov(a34,a23) Cov(a34,b23) Cov(a34,c23) Cov(a34,d23) Cov(a34,a24) Cov(a34,b24) Cov(a34,c24) Cov(a34,d24) Cov(a34,a25) Cov(a34,b25) Cov(a34,c25) Cov(a34,d25) Cov(a34,a31) Cov(a34,b31) Cov(a34,c31) Cov(a34,d31) Cov(a34,a32) Cov(a34,b32) Cov(a34,c32) Cov(a34,d32) Var(a34)
+#342 Cov(b34,a12) Cov(b34,b12) Cov(b34,c12) Cov(b34,d12) Cov(b34,a13) Cov(b34,b13) Cov(b34,c13) Cov(b34,d13) Cov(b34,a14) Cov(b34,b14) Cov(b34,c14) Cov(b34,d14) Cov(b34,a15) Cov(b34,b15) Cov(b34,c15) Cov(b34,d15) Cov(b34,a21) Cov(b34,b21) Cov(b34,c21) Cov(b34,d21) Cov(b34,a23) Cov(b34,b23) Cov(b34,c23) Cov(b34,d23) Cov(b34,a24) Cov(b34,b24) Cov(b34,c24) Cov(b34,d24) Cov(b34,a25) Cov(b34,b25) Cov(b34,c25) Cov(b34,d25) Cov(b34,a31) Cov(b34,b31) Cov(b34,c31) Cov(b34,d31) Cov(b34,a32) Cov(b34,b32) Cov(b34,c32) Cov(b34,d32) Cov(b34,a34) Var(b34)
+#343 Cov(c34,a12) Cov(c34,b12) Cov(c34,c12) Cov(c34,d12) Cov(c34,a13) Cov(c34,b13) Cov(c34,c13) Cov(c34,d13) Cov(c34,a14) Cov(c34,b14) Cov(c34,c14) Cov(c34,d14) Cov(c34,a15) Cov(c34,b15) Cov(c34,c15) Cov(c34,d15) Cov(c34,a21) Cov(c34,b21) Cov(c34,c21) Cov(c34,d21) Cov(c34,a23) Cov(c34,b23) Cov(c34,c23) Cov(c34,d23) Cov(c34,a24) Cov(c34,b24) Cov(c34,c24) Cov(c34,d24) Cov(c34,a25) Cov(c34,b25) Cov(c34,c25) Cov(c34,d25) Cov(c34,a31) Cov(c34,b31) Cov(c34,c31) Cov(c34,d31) Cov(c34,a32) Cov(c34,b32) Cov(c34,c32) Cov(c34,d32) Cov(c34,a34) Cov(c34,b34) Var(c34)
+#344 Cov(d34,a12) Cov(d34,b12) Cov(d34,c12) Cov(d34,d12) Cov(d34,a13) Cov(d34,b13) Cov(d34,c13) Cov(d34,d13) Cov(d34,a14) Cov(d34,b14) Cov(d34,c14) Cov(d34,d14) Cov(d34,a15) Cov(d34,b15) Cov(d34,c15) Cov(d34,d15) Cov(d34,a21) Cov(d34,b21) Cov(d34,c21) Cov(d34,d21) Cov(d34,a23) Cov(d34,b23) Cov(d34,c23) Cov(d34,d23) Cov(d34,a24) Cov(d34,b24) Cov(d34,c24) Cov(d34,d24) Cov(d34,a25) Cov(d34,b25) Cov(d34,c25) Cov(d34,d25) Cov(d34,a31) Cov(d34,b31) Cov(d34,c31) Cov(d34,d31) Cov(d34,a32) Cov(d34,b32) Cov(d34,c32) Cov(d34,d32) Cov(d34,a34) Cov(d34,b34) Cov(d34,c34) Var(d34)
+#351 Cov(a35,a12) Cov(a35,b12) Cov(a35,c12) Cov(a35,d12) Cov(a35,a13) Cov(a35,b13) Cov(a35,c13) Cov(a35,d13) Cov(a35,a14) Cov(a35,b14) Cov(a35,c14) Cov(a35,d14) Cov(a35,a15) Cov(a35,b15) Cov(a35,c15) Cov(a35,d15) Cov(a35,a21) Cov(a35,b21) Cov(a35,c21) Cov(a35,d21) Cov(a35,a23) Cov(a35,b23) Cov(a35,c23) Cov(a35,d23) Cov(a35,a24) Cov(a35,b24) Cov(a35,c24) Cov(a35,d24) Cov(a35,a25) Cov(a35,b25) Cov(a35,c25) Cov(a35,d25) Cov(a35,a31) Cov(a35,b31) Cov(a35,c31) Cov(a35,d31) Cov(a35,a32) Cov(a35,b32) Cov(a35,c32) Cov(a35,d32) Cov(a35,a34) Cov(a35,b34) Cov(a35,c34) Cov(a35,d34) Var(a35)
+#352 Cov(b35,a12) Cov(b35,b12) Cov(b35,c12) Cov(b35,d12) Cov(b35,a13) Cov(b35,b13) Cov(b35,c13) Cov(b35,d13) Cov(b35,a14) Cov(b35,b14) Cov(b35,c14) Cov(b35,d14) Cov(b35,a15) Cov(b35,b15) Cov(b35,c15) Cov(b35,d15) Cov(b35,a21) Cov(b35,b21) Cov(b35,c21) Cov(b35,d21) Cov(b35,a23) Cov(b35,b23) Cov(b35,c23) Cov(b35,d23) Cov(b35,a24) Cov(b35,b24) Cov(b35,c24) Cov(b35,d24) Cov(b35,a25) Cov(b35,b25) Cov(b35,c25) Cov(b35,d25) Cov(b35,a31) Cov(b35,b31) Cov(b35,c31) Cov(b35,d31) Cov(b35,a32) Cov(b35,b32) Cov(b35,c32) Cov(b35,d32) Cov(b35,a34) Cov(b35,b34) Cov(b35,c34) Cov(b35,d34) Cov(b35,a35) Var(b35)
+#353 Cov(c35,a12) Cov(c35,b12) Cov(c35,c12) Cov(c35,d12) Cov(c35,a13) Cov(c35,b13) Cov(c35,c13) Cov(c35,d13) Cov(c35,a14) Cov(c35,b14) Cov(c35,c14) Cov(c35,d14) Cov(c35,a15) Cov(c35,b15) Cov(c35,c15) Cov(c35,d15) Cov(c35,a21) Cov(c35,b21) Cov(c35,c21) Cov(c35,d21) Cov(c35,a23) Cov(c35,b23) Cov(c35,c23) Cov(c35,d23) Cov(c35,a24) Cov(c35,b24) Cov(c35,c24) Cov(c35,d24) Cov(c35,a25) Cov(c35,b25) Cov(c35,c25) Cov(c35,d25) Cov(c35,a31) Cov(c35,b31) Cov(c35,c31) Cov(c35,d31) Cov(c35,a32) Cov(c35,b32) Cov(c35,c32) Cov(c35,d32) Cov(c35,a34) Cov(c35,b34) Cov(c35,c34) Cov(c35,d34) Cov(c35,a35) Cov(c35,b35) Var(c35)
+#354 Cov(d35,a12) Cov(d35,b12) Cov(d35,c12) Cov(d35,d12) Cov(d35,a13) Cov(d35,b13) Cov(d35,c13) Cov(d35,d13) Cov(d35,a14) Cov(d35,b14) Cov(d35,c14) Cov(d35,d14) Cov(d35,a15) Cov(d35,b15) Cov(d35,c15) Cov(d35,d15) Cov(d35,a21) Cov(d35,b21) Cov(d35,c21) Cov(d35,d21) Cov(d35,a23) Cov(d35,b23) Cov(d35,c23) Cov(d35,d23) Cov(d35,a24) Cov(d35,b24) Cov(d35,c24) Cov(d35,d24) Cov(d35,a25) Cov(d35,b25) Cov(d35,c25) Cov(d35,d25) Cov(d35,a31) Cov(d35,b31) Cov(d35,c31) Cov(d35,d31) Cov(d35,a32) Cov(d35,b32) Cov(d35,c32) Cov(d35,d32) Cov(d35,a34) Cov(d35,b34) Cov(d35,c34) Cov(d35,d34) Cov(d35,a35) Cov(d35,b35) Cov(d35,c35) Var(d35)
+#411 Cov(a41,a12) Cov(a41,b12) Cov(a41,c12) Cov(a41,d12) Cov(a41,a13) Cov(a41,b13) Cov(a41,c13) Cov(a41,d13) Cov(a41,a14) Cov(a41,b14) Cov(a41,c14) Cov(a41,d14) Cov(a41,a15) Cov(a41,b15) Cov(a41,c15) Cov(a41,d15) Cov(a41,a21) Cov(a41,b21) Cov(a41,c21) Cov(a41,d21) Cov(a41,a23) Cov(a41,b23) Cov(a41,c23) Cov(a41,d23) Cov(a41,a24) Cov(a41,b24) Cov(a41,c24) Cov(a41,d24) Cov(a41,a25) Cov(a41,b25) Cov(a41,c25) Cov(a41,d25) Cov(a41,a31) Cov(a41,b31) Cov(a41,c31) Cov(a41,d31) Cov(a41,a32) Cov(a41,b32) Cov(a41,c32) Cov(a41,d32) Cov(a41,a34) Cov(a41,b34) Cov(a41,c34) Cov(a41,d34) Cov(a41,a35) Cov(a41,b35) Cov(a41,c35) Cov(a41,d35) Var(a41)
+#412 Cov(b41,a12) Cov(b41,b12) Cov(b41,c12) Cov(b41,d12) Cov(b41,a13) Cov(b41,b13) Cov(b41,c13) Cov(b41,d13) Cov(b41,a14) Cov(b41,b14) Cov(b41,c14) Cov(b41,d14) Cov(b41,a15) Cov(b41,b15) Cov(b41,c15) Cov(b41,d15) Cov(b41,a21) Cov(b41,b21) Cov(b41,c21) Cov(b41,d21) Cov(b41,a23) Cov(b41,b23) Cov(b41,c23) Cov(b41,d23) Cov(b41,a24) Cov(b41,b24) Cov(b41,c24) Cov(b41,d24) Cov(b41,a25) Cov(b41,b25) Cov(b41,c25) Cov(b41,d25) Cov(b41,a31) Cov(b41,b31) Cov(b41,c31) Cov(b41,d31) Cov(b41,a32) Cov(b41,b32) Cov(b41,c32) Cov(b41,d32) Cov(b41,a34) Cov(b41,b34) Cov(b41,c34) Cov(b41,d34) Cov(b41,a35) Cov(b41,b35) Cov(b41,c35) Cov(b41,d35) Cov(b41,a41) Var(b41)
+#413 Cov(c41,a12) Cov(c41,b12) Cov(c41,c12) Cov(c41,d12) Cov(c41,a13) Cov(c41,b13) Cov(c41,c13) Cov(c41,d13) Cov(c41,a14) Cov(c41,b14) Cov(c41,c14) Cov(c41,d14) Cov(c41,a15) Cov(c41,b15) Cov(c41,c15) Cov(c41,d15) Cov(c41,a21) Cov(c41,b21) Cov(c41,c21) Cov(c41,d21) Cov(c41,a23) Cov(c41,b23) Cov(c41,c23) Cov(c41,d23) Cov(c41,a24) Cov(c41,b24) Cov(c41,c24) Cov(c41,d24) Cov(c41,a25) Cov(c41,b25) Cov(c41,c25) Cov(c41,d25) Cov(c41,a31) Cov(c41,b31) Cov(c41,c31) Cov(c41,d31) Cov(c41,a32) Cov(c41,b32) Cov(c41,c32) Cov(c41,d32) Cov(c41,a34) Cov(c41,b34) Cov(c41,c34) Cov(c41,d34) Cov(c41,a35) Cov(c41,b35) Cov(c41,c35) Cov(c41,d35) Cov(c41,a41) Cov(c41,b41) Var(c41)
+#414 Cov(d41,a12) Cov(d41,b12) Cov(d41,c12) Cov(d41,d12) Cov(d41,a13) Cov(d41,b13) Cov(d41,c13) Cov(d41,d13) Cov(d41,a14) Cov(d41,b14) Cov(d41,c14) Cov(d41,d14) Cov(d41,a15) Cov(d41,b15) Cov(d41,c15) Cov(d41,d15) Cov(d41,a21) Cov(d41,b21) Cov(d41,c21) Cov(d41,d21) Cov(d41,a23) Cov(d41,b23) Cov(d41,c23) Cov(d41,d23) Cov(d41,a24) Cov(d41,b24) Cov(d41,c24) Cov(d41,d24) Cov(d41,a25) Cov(d41,b25) Cov(d41,c25) Cov(d41,d25) Cov(d41,a31) Cov(d41,b31) Cov(d41,c31) Cov(d41,d31) Cov(d41,a32) Cov(d41,b32) Cov(d41,c32) Cov(d41,d32) Cov(d41,a34) Cov(d41,b34) Cov(d41,c34) Cov(d41,d34) Cov(d41,a35) Cov(d41,b35) Cov(d41,c35) Cov(d41,d35) Cov(d41,a41) Cov(d41,b41) Cov(d41,c41) Var(d41)
+#421 Cov(a42,a12) Cov(a42,b12) Cov(a42,c12) Cov(a42,d12) Cov(a42,a13) Cov(a42,b13) Cov(a42,c13) Cov(a42,d13) Cov(a42,a14) Cov(a42,b14) Cov(a42,c14) Cov(a42,d14) Cov(a42,a15) Cov(a42,b15) Cov(a42,c15) Cov(a42,d15) Cov(a42,a21) Cov(a42,b21) Cov(a42,c21) Cov(a42,d21) Cov(a42,a23) Cov(a42,b23) Cov(a42,c23) Cov(a42,d23) Cov(a42,a24) Cov(a42,b24) Cov(a42,c24) Cov(a42,d24) Cov(a42,a25) Cov(a42,b25) Cov(a42,c25) Cov(a42,d25) Cov(a42,a31) Cov(a42,b31) Cov(a42,c31) Cov(a42,d31) Cov(a42,a32) Cov(a42,b32) Cov(a42,c32) Cov(a42,d32) Cov(a42,a34) Cov(a42,b34) Cov(a42,c34) Cov(a42,d34) Cov(a42,a35) Cov(a42,b35) Cov(a42,c35) Cov(a42,d35) Cov(a42,a41) Cov(a42,b41) Cov(a42,c41) Cov(a42,d41) Var(a42)
+#422 Cov(b42,a12) Cov(b42,b12) Cov(b42,c12) Cov(b42,d12) Cov(b42,a13) Cov(b42,b13) Cov(b42,c13) Cov(b42,d13) Cov(b42,a14) Cov(b42,b14) Cov(b42,c14) Cov(b42,d14) Cov(b42,a15) Cov(b42,b15) Cov(b42,c15) Cov(b42,d15) Cov(b42,a21) Cov(b42,b21) Cov(b42,c21) Cov(b42,d21) Cov(b42,a23) Cov(b42,b23) Cov(b42,c23) Cov(b42,d23) Cov(b42,a24) Cov(b42,b24) Cov(b42,c24) Cov(b42,d24) Cov(b42,a25) Cov(b42,b25) Cov(b42,c25) Cov(b42,d25) Cov(b42,a31) Cov(b42,b31) Cov(b42,c31) Cov(b42,d31) Cov(b42,a32) Cov(b42,b32) Cov(b42,c32) Cov(b42,d32) Cov(b42,a34) Cov(b42,b34) Cov(b42,c34) Cov(b42,d34) Cov(b42,a35) Cov(b42,b35) Cov(b42,c35) Cov(b42,d35) Cov(b42,a41) Cov(b42,b41) Cov(b42,c41) Cov(b42,d41) Cov(b42,a42) Var(b42)
+#423 Cov(c42,a12) Cov(c42,b12) Cov(c42,c12) Cov(c42,d12) Cov(c42,a13) Cov(c42,b13) Cov(c42,c13) Cov(c42,d13) Cov(c42,a14) Cov(c42,b14) Cov(c42,c14) Cov(c42,d14) Cov(c42,a15) Cov(c42,b15) Cov(c42,c15) Cov(c42,d15) Cov(c42,a21) Cov(c42,b21) Cov(c42,c21) Cov(c42,d21) Cov(c42,a23) Cov(c42,b23) Cov(c42,c23) Cov(c42,d23) Cov(c42,a24) Cov(c42,b24) Cov(c42,c24) Cov(c42,d24) Cov(c42,a25) Cov(c42,b25) Cov(c42,c25) Cov(c42,d25) Cov(c42,a31) Cov(c42,b31) Cov(c42,c31) Cov(c42,d31) Cov(c42,a32) Cov(c42,b32) Cov(c42,c32) Cov(c42,d32) Cov(c42,a34) Cov(c42,b34) Cov(c42,c34) Cov(c42,d34) Cov(c42,a35) Cov(c42,b35) Cov(c42,c35) Cov(c42,d35) Cov(c42,a41) Cov(c42,b41) Cov(c42,c41) Cov(c42,d41) Cov(c42,a42) Cov(c42,b42) Var(c42)
+#424 Cov(d42,a12) Cov(d42,b12) Cov(d42,c12) Cov(d42,d12) Cov(d42,a13) Cov(d42,b13) Cov(d42,c13) Cov(d42,d13) Cov(d42,a14) Cov(d42,b14) Cov(d42,c14) Cov(d42,d14) Cov(d42,a15) Cov(d42,b15) Cov(d42,c15) Cov(d42,d15) Cov(d42,a21) Cov(d42,b21) Cov(d42,c21) Cov(d42,d21) Cov(d42,a23) Cov(d42,b23) Cov(d42,c23) Cov(d42,d23) Cov(d42,a24) Cov(d42,b24) Cov(d42,c24) Cov(d42,d24) Cov(d42,a25) Cov(d42,b25) Cov(d42,c25) Cov(d42,d25) Cov(d42,a31) Cov(d42,b31) Cov(d42,c31) Cov(d42,d31) Cov(d42,a32) Cov(d42,b32) Cov(d42,c32) Cov(d42,d32) Cov(d42,a34) Cov(d42,b34) Cov(d42,c34) Cov(d42,d34) Cov(d42,a35) Cov(d42,b35) Cov(d42,c35) Cov(d42,d35) Cov(d42,a41) Cov(d42,b41) Cov(d42,c41) Cov(d42,d41) Cov(d42,a42) Cov(d42,b42) Cov(d42,c42) Var(d42)
+#431 Cov(a43,a12) Cov(a43,b12) Cov(a43,c12) Cov(a43,d12) Cov(a43,a13) Cov(a43,b13) Cov(a43,c13) Cov(a43,d13) Cov(a43,a14) Cov(a43,b14) Cov(a43,c14) Cov(a43,d14) Cov(a43,a15) Cov(a43,b15) Cov(a43,c15) Cov(a43,d15) Cov(a43,a21) Cov(a43,b21) Cov(a43,c21) Cov(a43,d21) Cov(a43,a23) Cov(a43,b23) Cov(a43,c23) Cov(a43,d23) Cov(a43,a24) Cov(a43,b24) Cov(a43,c24) Cov(a43,d24) Cov(a43,a25) Cov(a43,b25) Cov(a43,c25) Cov(a43,d25) Cov(a43,a31) Cov(a43,b31) Cov(a43,c31) Cov(a43,d31) Cov(a43,a32) Cov(a43,b32) Cov(a43,c32) Cov(a43,d32) Cov(a43,a34) Cov(a43,b34) Cov(a43,c34) Cov(a43,d34) Cov(a43,a35) Cov(a43,b35) Cov(a43,c35) Cov(a43,d35) Cov(a43,a41) Cov(a43,b41) Cov(a43,c41) Cov(a43,d41) Cov(a43,a42) Cov(a43,b42) Cov(a43,c42) Cov(a43,d42) Var(a43)
+#432 Cov(b43,a12) Cov(b43,b12) Cov(b43,c12) Cov(b43,d12) Cov(b43,a13) Cov(b43,b13) Cov(b43,c13) Cov(b43,d13) Cov(b43,a14) Cov(b43,b14) Cov(b43,c14) Cov(b43,d14) Cov(b43,a15) Cov(b43,b15) Cov(b43,c15) Cov(b43,d15) Cov(b43,a21) Cov(b43,b21) Cov(b43,c21) Cov(b43,d21) Cov(b43,a23) Cov(b43,b23) Cov(b43,c23) Cov(b43,d23) Cov(b43,a24) Cov(b43,b24) Cov(b43,c24) Cov(b43,d24) Cov(b43,a25) Cov(b43,b25) Cov(b43,c25) Cov(b43,d25) Cov(b43,a31) Cov(b43,b31) Cov(b43,c31) Cov(b43,d31) Cov(b43,a32) Cov(b43,b32) Cov(b43,c32) Cov(b43,d32) Cov(b43,a34) Cov(b43,b34) Cov(b43,c34) Cov(b43,d34) Cov(b43,a35) Cov(b43,b35) Cov(b43,c35) Cov(b43,d35) Cov(b43,a41) Cov(b43,b41) Cov(b43,c41) Cov(b43,d41) Cov(b43,a42) Cov(b43,b42) Cov(b43,c42) Cov(b43,d42) Cov(b43,a43) Var(b43)
+#433 Cov(c43,a12) Cov(c43,b12) Cov(c43,c12) Cov(c43,d12) Cov(c43,a13) Cov(c43,b13) Cov(c43,c13) Cov(c43,d13) Cov(c43,a14) Cov(c43,b14) Cov(c43,c14) Cov(c43,d14) Cov(c43,a15) Cov(c43,b15) Cov(c43,c15) Cov(c43,d15) Cov(c43,a21) Cov(c43,b21) Cov(c43,c21) Cov(c43,d21) Cov(c43,a23) Cov(c43,b23) Cov(c43,c23) Cov(c43,d23) Cov(c43,a24) Cov(c43,b24) Cov(c43,c24) Cov(c43,d24) Cov(c43,a25) Cov(c43,b25) Cov(c43,c25) Cov(c43,d25) Cov(c43,a31) Cov(c43,b31) Cov(c43,c31) Cov(c43,d31) Cov(c43,a32) Cov(c43,b32) Cov(c43,c32) Cov(c43,d32) Cov(c43,a34) Cov(c43,b34) Cov(c43,c34) Cov(c43,d34) Cov(c43,a35) Cov(c43,b35) Cov(c43,c35) Cov(c43,d35) Cov(c43,a41) Cov(c43,b41) Cov(c43,c41) Cov(c43,d41) Cov(c43,a42) Cov(c43,b42) Cov(c43,c42) Cov(c43,d42) Cov(c43,a43) Cov(c43,b43) Var(c43)
+#434 Cov(d43,a12) Cov(d43,b12) Cov(d43,c12) Cov(d43,d12) Cov(d43,a13) Cov(d43,b13) Cov(d43,c13) Cov(d43,d13) Cov(d43,a14) Cov(d43,b14) Cov(d43,c14) Cov(d43,d14) Cov(d43,a15) Cov(d43,b15) Cov(d43,c15) Cov(d43,d15) Cov(d43,a21) Cov(d43,b21) Cov(d43,c21) Cov(d43,d21) Cov(d43,a23) Cov(d43,b23) Cov(d43,c23) Cov(d43,d23) Cov(d43,a24) Cov(d43,b24) Cov(d43,c24) Cov(d43,d24) Cov(d43,a25) Cov(d43,b25) Cov(d43,c25) Cov(d43,d25) Cov(d43,a31) Cov(d43,b31) Cov(d43,c31) Cov(d43,d31) Cov(d43,a32) Cov(d43,b32) Cov(d43,c32) Cov(d43,d32) Cov(d43,a34) Cov(d43,b34) Cov(d43,c34) Cov(d43,d34) Cov(d43,a35) Cov(d43,b35) Cov(d43,c35) Cov(d43,d35) Cov(d43,a41) Cov(d43,b41) Cov(d43,c41) Cov(d43,d41) Cov(d43,a42) Cov(d43,b42) Cov(d43,c42) Cov(d43,d42) Cov(d43,a43) Cov(d43,b43) Cov(d43,c43) Var(d43)
+#451 Cov(a45,a12) Cov(a45,b12) Cov(a45,c12) Cov(a45,d12) Cov(a45,a13) Cov(a45,b13) Cov(a45,c13) Cov(a45,d13) Cov(a45,a14) Cov(a45,b14) Cov(a45,c14) Cov(a45,d14) Cov(a45,a15) Cov(a45,b15) Cov(a45,c15) Cov(a45,d15) Cov(a45,a21) Cov(a45,b21) Cov(a45,c21) Cov(a45,d21) Cov(a45,a23) Cov(a45,b23) Cov(a45,c23) Cov(a45,d23) Cov(a45,a24) Cov(a45,b24) Cov(a45,c24) Cov(a45,d24) Cov(a45,a25) Cov(a45,b25) Cov(a45,c25) Cov(a45,d25) Cov(a45,a31) Cov(a45,b31) Cov(a45,c31) Cov(a45,d31) Cov(a45,a32) Cov(a45,b32) Cov(a45,c32) Cov(a45,d32) Cov(a45,a34) Cov(a45,b34) Cov(a45,c34) Cov(a45,d34) Cov(a45,a35) Cov(a45,b35) Cov(a45,c35) Cov(a45,d35) Cov(a45,a41) Cov(a45,b41) Cov(a45,c41) Cov(a45,d41) Cov(a45,a42) Cov(a45,b42) Cov(a45,c42) Cov(a45,d42) Cov(a45,a43) Cov(a45,b43) Cov(a45,c43) Cov(a45,d43) Var(a45)
+#452 Cov(b45,a12) Cov(b45,b12) Cov(b45,c12) Cov(b45,d12) Cov(b45,a13) Cov(b45,b13) Cov(b45,c13) Cov(b45,d13) Cov(b45,a14) Cov(b45,b14) Cov(b45,c14) Cov(b45,d14) Cov(b45,a15) Cov(b45,b15) Cov(b45,c15) Cov(b45,d15) Cov(b45,a21) Cov(b45,b21) Cov(b45,c21) Cov(b45,d21) Cov(b45,a23) Cov(b45,b23) Cov(b45,c23) Cov(b45,d23) Cov(b45,a24) Cov(b45,b24) Cov(b45,c24) Cov(b45,d24) Cov(b45,a25) Cov(b45,b25) Cov(b45,c25) Cov(b45,d25) Cov(b45,a31) Cov(b45,b31) Cov(b45,c31) Cov(b45,d31) Cov(b45,a32) Cov(b45,b32) Cov(b45,c32) Cov(b45,d32) Cov(b45,a34) Cov(b45,b34) Cov(b45,c34) Cov(b45,d34) Cov(b45,a35) Cov(b45,b35) Cov(b45,c35) Cov(b45,d35) Cov(b45,a41) Cov(b45,b41) Cov(b45,c41) Cov(b45,d41) Cov(b45,a42) Cov(b45,b42) Cov(b45,c42) Cov(b45,d42) Cov(b45,a43) Cov(b45,b43) Cov(b45,c43) Cov(b45,d43) Cov(b45,a45) Var(b45)
+#453 Cov(c45,a12) Cov(c45,b12) Cov(c45,c12) Cov(c45,d12) Cov(c45,a13) Cov(c45,b13) Cov(c45,c13) Cov(c45,d13) Cov(c45,a14) Cov(c45,b14) Cov(c45,c14) Cov(c45,d14) Cov(c45,a15) Cov(c45,b15) Cov(c45,c15) Cov(c45,d15) Cov(c45,a21) Cov(c45,b21) Cov(c45,c21) Cov(c45,d21) Cov(c45,a23) Cov(c45,b23) Cov(c45,c23) Cov(c45,d23) Cov(c45,a24) Cov(c45,b24) Cov(c45,c24) Cov(c45,d24) Cov(c45,a25) Cov(c45,b25) Cov(c45,c25) Cov(c45,d25) Cov(c45,a31) Cov(c45,b31) Cov(c45,c31) Cov(c45,d31) Cov(c45,a32) Cov(c45,b32) Cov(c45,c32) Cov(c45,d32) Cov(c45,a34) Cov(c45,b34) Cov(c45,c34) Cov(c45,d34) Cov(c45,a35) Cov(c45,b35) Cov(c45,c35) Cov(c45,d35) Cov(c45,a41) Cov(c45,b41) Cov(c45,c41) Cov(c45,d41) Cov(c45,a42) Cov(c45,b42) Cov(c45,c42) Cov(c45,d42) Cov(c45,a43) Cov(c45,b43) Cov(c45,c43) Cov(c45,d43) Cov(c45,a45) Cov(c45,b45) Var(c45)
+#454 Cov(d45,a12) Cov(d45,b12) Cov(d45,c12) Cov(d45,d12) Cov(d45,a13) Cov(d45,b13) Cov(d45,c13) Cov(d45,d13) Cov(d45,a14) Cov(d45,b14) Cov(d45,c14) Cov(d45,d14) Cov(d45,a15) Cov(d45,b15) Cov(d45,c15) Cov(d45,d15) Cov(d45,a21) Cov(d45,b21) Cov(d45,c21) Cov(d45,d21) Cov(d45,a23) Cov(d45,b23) Cov(d45,c23) Cov(d45,d23) Cov(d45,a24) Cov(d45,b24) Cov(d45,c24) Cov(d45,d24) Cov(d45,a25) Cov(d45,b25) Cov(d45,c25) Cov(d45,d25) Cov(d45,a31) Cov(d45,b31) Cov(d45,c31) Cov(d45,d31) Cov(d45,a32) Cov(d45,b32) Cov(d45,c32) Cov(d45,d32) Cov(d45,a34) Cov(d45,b34) Cov(d45,c34) Cov(d45,d34) Cov(d45,a35) Cov(d45,b35) Cov(d45,c35) Cov(d45,d35) Cov(d45,a41) Cov(d45,b41) Cov(d45,c41) Cov(d45,d41) Cov(d45,a42) Cov(d45,b42) Cov(d45,c42) Cov(d45,d42) Cov(d45,a43) Cov(d45,b43) Cov(d45,c43) Cov(d45,d43) Cov(d45,a45) Cov(d45,b45) Cov(d45,c45) Var(d45)
+121 0.
+122 0. 0.
+123 0. 0. 0.
+124 0. 0. 0. 0.
+131 0. 0. 0. 0. 0.
+132 0. 0. 0. 0. 0. 0.
+133 0. 0. 0. 0. 0. 0. 0.
+134 0. 0. 0. 0. 0. 0. 0. 0.
+141 0. 0. 0. 0. 0. 0. 0. 0. 0.
+142 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+143 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+144 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+151 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+152 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+153 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+154 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+211 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+212 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+213 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+214 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+231 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+232 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+233 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+234 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+241 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+242 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+243 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+244 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+251 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+252 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+253 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+254 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+311 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+312 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+313 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+314 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+321 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+322 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+323 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+324 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+341 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+342 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+343 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+344 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+351 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+352 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+353 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+354 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+411 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+412 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+413 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+414 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+421 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+422 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+423 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+424 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+431 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+432 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+433 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+434 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+451 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+452 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+453 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+454 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+# agemin agemax for lifexpectancy, bage fage (if mle==0 ie no data nor Max likelihood).
+agemin=50 agemax=120 bage=50 fage=120 estepm=24 ftolpl=6e-4
+#Observed prevalence period
+begin-prev-date=1/2/2004 end-prev-date=30/9/2023 mov_average=0
+# Population or status based
+pop_based=0
+#prevforecast=1 starting-proj-date=day/month/year final-proj-date=day/month/year mobil_average=1
+prevforecast=1 yearsfproj=20 mobil_average=1
+prevbackcast=1 yearsbproj=20 mobil_average=1
+result: V1=0 V2=0
+result: V1=1 V2=0
+result: V1=0 V2=1
